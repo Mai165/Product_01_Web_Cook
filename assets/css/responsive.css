@@ -1,0 +1,134 @@
+/* PC */
+@media screen and (min-width: 992px) {
+    .mobile-header {
+        display: none;
+    }
+
+    .toggle-menu {
+        display: none;
+    }
+}
+
+/* Tablet & mobie */
+@media screen and (max-width: 991px) {
+    .container {
+        max-width: calc(100% - 96px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .header__nav,
+    .hearder__action {
+        display: none;
+    }
+
+    .toggle-menu {
+        margin-left: auto;
+    }
+
+    .toggle-menu__img {
+        height: 41px;
+        padding: 10px;
+        border-radius: 12px;
+        background: #D27722;
+    }
+
+    .menu-overley {
+        position: fixed;
+        inset: 0;
+        background: #fff;
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s ease;
+    }
+
+    .menu-drawer {
+        position: fixed;
+        inset: 0 0 0 20%;
+        background: #D27722;
+        z-index: 2;
+        transform: translateX(100%);
+        transition: 0.5s ease;
+    }
+
+    .menu-checkbox:checked~.menu-overley {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu-checkbox:checked~.menu-drawer {
+        transform: translateX(0);
+    }
+
+    .menu-drawer {
+        padding: 23px 53px 0 31px;
+    }
+
+    .menu-drawer__icon.dpfl {
+        justify-content: space-between;
+    }
+
+    .menu-drawer__list {
+        margin-top: 52px;
+
+    }
+
+    .menu-drawer__list__item+.menu-drawer__list__item {
+        margin-bottom: 10px;
+    }
+
+    .menu-drawer__item__link {
+        display: block;
+        color: #FFF;
+        font-size: 2.4;
+        font-weight: 400;
+        line-height: 1;
+        padding: 10px;
+    }
+
+    /* Hero */
+    .hero {
+        margin-top: 8px;
+        height: 1185px;
+    }
+
+    .hero__inner {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        display: grid;
+        align-items: center;
+    }
+
+    .hero__img {
+        grid-row-start: 1;
+        justify-self: center;
+    }
+
+    .hero__info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .lv1 {
+        font-size: 5rem;
+        font-weight: 700;
+        line-height: 1.133;
+    }
+
+
+
+}
+
+/* tablet */
+@media screen and (max-width: 768px) and (max-width:990px) {
+    .menu-drawer {
+        padding: 60px 60px 0 60px;
+    }
+}
+
+/* mobile */
+@media screen and (min-width: 767px) {}
